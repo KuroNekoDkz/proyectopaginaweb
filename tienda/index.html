@@ -1,0 +1,1152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge"><script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"ade4f02621",applicationID:"507442138"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(){}function i(t,e,n,r){return function(){return s.recordSupportability("API/"+e+"/called"),o(t+e,[u.now()].concat(c(arguments)),n?null:this,r),n?void 0:this}}var o=t("handle"),a=t(9),c=t(10),f=t("ee").get("tracer"),u=t("loader"),s=t(4),d=NREUM;"undefined"==typeof window.newrelic&&(newrelic=d);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",v=l+"ixn-";a(p,function(t,e){d[e]=i(l,e,!0,"api")}),d.addPageAction=i(l,"addPageAction",!0),d.setCurrentRouteName=i(l,"routeName",!0),e.exports=newrelic,d.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(v+"tracer",[u.now(),t,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw f.emit("fn-err",[arguments,this,t],n),t}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){m[e]=i(v,e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),s.recordSupportability("API/noticeError/called"),o("err",[t,u.now(),!1,e])}},{}],2:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],3:[function(t,e,n){var r=!1;try{var i=Object.defineProperty({},"passive",{get:function(){r=!0}});window.addEventListener("testPassive",null,i),window.removeEventListener("testPassive",null,i)}catch(o){}e.exports=function(t){return r?{passive:!0,capture:!!t}:!!t}},{}],4:[function(t,e,n){function r(t,e){var n=[a,t,{name:t},e];return o("storeMetric",n,null,"api"),n}function i(t,e){var n=[c,t,{name:t},e];return o("storeEventMetrics",n,null,"api"),n}var o=t("handle"),a="sm",c="cm";e.exports={constants:{SUPPORTABILITY_METRIC:a,CUSTOM_METRIC:c},recordSupportability:r,recordCustom:i}},{}],5:[function(t,e,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=t(11);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],6:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?l("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&l("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();if(n.length>0){var r=n[n.length-1];if(u&&u<r.startTime)return;var i=[r],o=a({});o&&i.push(o),l("lcp",i)}}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||l("cls",[t])})}function a(t){var e=navigator.connection||navigator.mozConnection||navigator.webkitConnection;if(e)return e.type&&(t["net-type"]=e.type),e.effectiveType&&(t["net-etype"]=e.effectiveType),e.rtt&&(t["net-rtt"]=e.rtt),e.downlink&&(t["net-dlink"]=e.downlink),t}function c(t){if(t instanceof y&&!w){var e=Math.round(t.timeStamp),n={type:t.type};a(n),e<=v.now()?n.fid=v.now()-e:e>v.offset&&e<=Date.now()?(e-=v.offset,n.fid=v.now()-e):e=v.now(),w=!0,l("timing",["fi",e,n])}}function f(t){"hidden"===t&&(u=v.now(),l("pageHide",[u]))}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var u,s,d,p,l=t("handle"),v=t("loader"),m=t(8),g=t(3),y=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){s=new PerformanceObserver(r);try{s.observe({entryTypes:["paint"]})}catch(h){}d=new PerformanceObserver(i);try{d.observe({entryTypes:["largest-contentful-paint"]})}catch(h){}p=new PerformanceObserver(o);try{p.observe({type:"layout-shift",buffered:!0})}catch(h){}}if("addEventListener"in document){var w=!1,b=["click","keydown","mousedown","pointerdown","touchstart"];b.forEach(function(t){document.addEventListener(t,c,g(!1))})}m(f)}},{}],7:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}e.exports={agent:i,version:o,match:r}},{}],8:[function(t,e,n){function r(t){function e(){t(c&&document[c]?document[c]:document[o]?"hidden":"visible")}"addEventListener"in document&&a&&document.addEventListener(a,e,i(!1))}var i=t(3);e.exports=r;var o,a,c;"undefined"!=typeof document.hidden?(o="hidden",a="visibilitychange",c="visibilityState"):"undefined"!=typeof document.msHidden?(o="msHidden",a="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(o="webkitHidden",a="webkitvisibilitychange",c="webkitVisibilityState")},{}],9:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],10:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],11:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?u(t,f,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){t&&a&&t(n,r,i);for(var c=e(i),f=m(n),u=f.length,s=0;s<u;s++)f[s].apply(c,r);var p=d[w[n]];return p&&p.push([b,n,r,c]),c}}function o(t,e){h[t]=m(t).concat(e)}function v(t,e){var n=h[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return h[t]||[]}function g(t){return p[t]=p[t]||i(n)}function y(t,e){l.aborted||s(t,function(t,n){e=e||"feature",w[n]=e,e in d||(d[e]=[])})}var h={},w={},b={on:o,addEventListener:o,removeEventListener:v,emit:n,get:g,listeners:m,context:e,buffer:y,abort:c,aborted:!1};return b}function o(t){return u(t,f,a)}function a(){return new r}function c(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var f="nr@context",u=t("gos"),s=t(9),d={},p={},l=e.exports=i();e.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!M++){var t=T.info=NREUM.info,e=m.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();f(x,function(e,n){t[e]||(t[e]=n)});var n=a();c("mark",["onload",n+T.offset],null,"api"),c("timing",["load",n]);var r=m.createElement("script");0===t.agent.indexOf("http://")||0===t.agent.indexOf("https://")?r.src=t.agent:r.src=l+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===m.readyState&&o()}function o(){c("mark",["domContent",a()+T.offset],null,"api")}var a=t(5),c=t("handle"),f=t(9),u=t("ee"),s=t(7),d=t(2),p=t(3),l=d.getConfiguration("ssl")===!1?"http":"https",v=window,m=v.document,g="addEventListener",y="attachEvent",h=v.XMLHttpRequest,w=h&&h.prototype,b=!1;NREUM.o={ST:setTimeout,SI:v.setImmediate,CT:clearTimeout,XHR:h,REQ:v.Request,EV:v.Event,PR:v.Promise,MO:v.MutationObserver};var E=""+location,x={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1216.min.js"},O=h&&w&&w[g]&&!/CriOS/.test(navigator.userAgent),T=e.exports={offset:a.getLastTimestamp(),now:a,origin:E,features:{},xhrWrappable:O,userAgent:s,disabled:b};if(!b){t(1),t(6),m[g]?(m[g]("DOMContentLoaded",o,p(!1)),v[g]("load",r,p(!1))):(m[y]("onreadystatechange",i),v[y]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var M=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,f,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,f],s],t)}c(n+"start",[o,a,f],s,u);try{return p=e.apply(a,o)}catch(v){throw c(n+"err",[o,a,v],s,u),v}finally{c(n+"end",[o,a,p],s,u)}}return a(e)?e:(n||(n=""),nrWrapper[p]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var c,f,u,s="-"===r.charAt(0);for(u=0;u<e.length;u++)f=e[u],c=t[f],a(c)||(t[f]=n(c,s?f+r:r,i,f,o))}function c(n,r,o,a){if(!v||e){var c=v;v=!0;try{t.emit(n,r,o,e,a)}catch(f){i([f,n,r,o],t)}v=c}}return t||(t=s),n.inPlace=r,n.flag=p,n}function i(t,e){e||(e=s);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)l.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[p])}function c(t,e){var n=e(t);return n[p]=t,o(t,n,s),n}function f(t,e,n){var r=t[e];t[e]=c(r,n)}function u(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var s=t("ee"),d=t(10),p="nr@original",l=Object.prototype.hasOwnProperty,v=!1;e.exports=r,e.exports.wrapFunction=c,e.exports.wrapInPlace=f,e.exports.argsToArray=u},{}]},{},["loader"]);</script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DarkCraft | Welcome</title>
+<link href="style.min.css" rel="stylesheet">
+<link href="Style2.min.css" rel="stylesheet">
+<link rel="shortcut icon" href="https://dunb17ur4ymx4.cloudfront.net/webstore/favicons/a52ee4f2882589fdae2199e5145144d35822064c.png">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/5.5.55/css/materialdesignicons.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/izimodal/1.5.1/css/iziModal.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/css/iziToast.min.css">
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+
+    _gaq.push(['_setAccount', 'UA-36735942-3']);
+    _gaq.push(['_trackPageview']);
+
+    
+    (function () {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+<style>
+    @media only screen and (min-width: 968px) {
+    .triplezone-header-g {
+        margin-top: -50px !important;
+    }
+}
+</style>
+
+
+
+<style>
+                #featured__4080760 .featured__package__text--title{
+            color: #a122e0;
+        }
+        #featured__4080760{
+            background: #a122e03F;
+            border-color: #a122e0;
+        }
+                #featured__4479103 .featured__package__text--title{
+            color: #af5eff;
+        }
+        #featured__4479103{
+            background: #af5eff3F;
+            border-color: #af5eff;
+        }
+                #featured__4392454 .featured__package__text--title{
+            color: #34b7eb;
+        }
+        #featured__4392454{
+            background: #34b7eb3F;
+            border-color: #34b7eb;
+        }
+            
+</style>
+
+    <style>
+                #lrangos:before {
+            background: url(https://cdn.discordapp.com/attachments/797912078206631957/1009103138856386721/image_1.png) no-repeat center !important;
+            background-size: contain !important;
+        }
+        #srangos:before {
+            background: url(https://cdn.discordapp.com/attachments/797912078206631957/1009103138856386721/image_1.png) no-repeat center !important;
+            background-size: contain !important;
+        }
+                #ltags:before {
+            background: url(https://cdn.discordapp.com/attachments/797912078206631957/1009061669953077338/unknown.png) no-repeat center !important;
+            background-size: contain !important;
+        }
+        #stags:before {
+            background: url(https://cdn.discordapp.com/attachments/797912078206631957/1009061669953077338/unknown.png) no-repeat center !important;
+            background-size: contain !important;
+        }
+                #lsurvival-1:before {
+            background: url(https://cdn.discordapp.com/attachments/797912078206631957/1009100582495191080/unknown.png) no-repeat center !important;
+            background-size: contain !important;
+        }
+        #ssurvival-1:before {
+            background: url(https://cdn.discordapp.com/attachments/797912078206631957/1009100582495191080/unknown.png) no-repeat center !important;
+            background-size: contain !important;
+        }
+                #lsurvival:before {
+            background: url(https://cdn.discordapp.com/attachments/797912078206631957/1009101402695540776/unknown.png) no-repeat center !important;
+            background-size: contain !important;
+        }
+        #ssurvival:before {
+            background: url(https://cdn.discordapp.com/attachments/797912078206631957/1009101402695540776/unknown.png) no-repeat center !important;
+            background-size: contain !important;
+        }
+                #lsurvival-2-1:before {
+            background: url(https://cdn.discordapp.com/attachments/797912078206631957/1009101124659327016/unknown.png) no-repeat center !important;
+            background-size: contain !important;
+        }
+        #ssurvival-2-1:before {
+            background: url(https://cdn.discordapp.com/attachments/797912078206631957/1009101124659327016/unknown.png) no-repeat center !important;
+            background-size: contain !important;
+        }
+                #lsurvival-2:before {
+            background: url(https://cdn.discordapp.com/attachments/797912078206631957/1009102002032222208/unknown.png) no-repeat center !important;
+            background-size: contain !important;
+        }
+        #ssurvival-2:before {
+            background: url(https://cdn.discordapp.com/attachments/797912078206631957/1009102002032222208/unknown.png) no-repeat center !important;
+            background-size: contain !important;
+        }
+                #loneblock:before {
+            background: url(https://cdn.discordapp.com/attachments/797912078206631957/1009102315350937730/unknown.png) no-repeat center !important;
+            background-size: contain !important;
+        }
+        #soneblock:before {
+            background: url(https://cdn.discordapp.com/attachments/797912078206631957/1009102315350937730/unknown.png) no-repeat center !important;
+            background-size: contain !important;
+        }
+                #lhitblock:before {
+            background: url(https://cdn.discordapp.com/attachments/797912078206631957/1009102474499600474/unknown.png) no-repeat center !important;
+            background-size: contain !important;
+        }
+        #shitblock:before {
+            background: url(https://cdn.discordapp.com/attachments/797912078206631957/1009102474499600474/unknown.png) no-repeat center !important;
+            background-size: contain !important;
+        }
+                #ldonacion:before {
+            background: url(https://cdn.discordapp.com/attachments/797912078206631957/1009102643341299762/unknown.png) no-repeat center !important;
+            background-size: contain !important;
+        }
+        #sdonacion:before {
+            background: url(https://cdn.discordapp.com/attachments/797912078206631957/1009102643341299762/unknown.png) no-repeat center !important;
+            background-size: contain !important;
+        }
+            </style>
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/js/iziToast.min.js"></script>
+</head>
+
+<body>
+
+<div id="modal" style="display: none;">
+    <div class="shopping-cart-overlay" id="shopping-cart-overlay">
+        <div class="shopping-cart" id="shopping-cart">
+            <div class="shopping-cart-header">
+                                <div class="avatar-shoppingcart">
+                                    </div>
+                                <div class="cart-description">
+                    <p class="title-cart"></p>
+                    <div class="currency-triplezone">
+                        <a href="/checkout/logout" class="logout-btn">Cerrar sesión</a>
+                        <button id="activate-dropdown">Moneda: <span>EUR</span> <i
+                                class="mdi mdi-chevron-down"></i></button>
+                        <div id="dropdown-currency-triplezone">
+                            <ul>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                <li class="active" >
+                                            <a href="?currency=EUR">EUR</a>
+                                        </li>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        <li >
+                                            <a href="?currency=GBP">GBP</a>
+                                        </li>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        <li >
+                                            <a href="?currency=USD">USD</a>
+                                        </li>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    </ul>
+                        </div>
+                    </div>
+                </div>
+                <button class="close-shoppingcart" data-izimodal-close><i class="mdi mdi-close-thick"></i></button>
+            </div>
+            <div class="shopping-cart-body">
+                                <p class="empty-cart-title">Carrito vacío</p>
+                <p class="empty-cart-description">¡Añade items al carrito y ven aquí cuando acabes!</p>
+                                
+                <div id="cart-items">
+                                    </div>
+
+            </div>
+                    </div>
+    </div>
+</div>
+
+<div id="modal-login" style="display: none;">
+<div id="loader" style="display: none;" class="login-loader">
+                <svg id="successAnimation" class="animated" xmlns="http://www.w3.org/2000/svg" width="70" height="70"
+            viewBox="0 0 70 70">
+            <path id="successAnimationResult" fill="#D8D8D8"
+                d="M35,60 C21.1928813,60 10,48.8071187 10,35 C10,21.1928813 21.1928813,10 35,10 C48.8071187,10 60,21.1928813 60,35 C60,48.8071187 48.8071187,60 35,60 Z M23.6332378,33.2260427 L22.3667622,34.7739573 L34.1433655,44.40936 L47.776114,27.6305926 L46.223886,26.3694074 L33.8566345,41.59064 L23.6332378,33.2260427 Z" />
+            <circle id="successAnimationCircle" cx="35" cy="35" r="24" stroke="#979797" stroke-width="2"
+                stroke-linecap="round" fill="transparent" />
+            <polyline id="successAnimationCheck" stroke="#979797" stroke-width="2" points="23 34 34 43 47 27"
+                fill="transparent" />
+        </svg>
+    <div class="loading__animated">
+        <img src="https://cdn.discordapp.com/attachments/455777545485549589/785783911585284106/tail-spin.svg" width="64px">
+    </div>
+</div>
+    <div class="login-panel">
+        <p class="login-title">¿Cuál es tu nick?</p>
+        <p class="login-description">Usamos tu nombre de usuario de Minecraft para darte las ventajas que compras. Los nombres de usuario contienen letras, números y guiones bajos.</p>
+        <form method="post" action="/login">
+            <div class="username">
+                <div class="triplezone-login">
+                    <div id="IGN_MC">
+                        <img src="https://cravatar.eu/helmavatar/MHF_Question/32.png" alt="" id="avatar_MC">
+                        <input type="text" name="ign" id="mc_IGN_INPUT" autocomplete="off">
+                    </div>
+                    <button class="" type="submit">Continuar</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div id="basket_items" style="display: none;">
+  {
+    "basket": {
+        "products": [
+                               
+        ],
+        "store_currency": "USD",
+        "total_basket": 0.00
+    }
+}
+</div>
+<div class="header-splash"><div class="teata" style="height: 100%;width: 100%;background: linear-gradient(transparent 0,rgb(0 0 0 / 53%) 30%,#131b28 100%);"></div></div>
+<header class="triplezone-header">
+        <div class="triplezone-wrapper prioritate" id="276945">
+        <div class="top-bar">
+                                                <a href="http://dark-craft.gq/" class="back-btn"><i class="mdi mdi-reply"></i> <span> Inicio</span></a>
+                                        <div class="profile-avatar"
+                data-izimodal-open="#modal-login">
+                <div class="profile-description">
+                    <p class="profile-title">¡No te has logeado!</p>
+                    <p class="profile-description-text">
+                                                    Click para logearse
+                                            </p>
+                </div>
+                <div class="profile-head">
+                                                                <img class="avatar-head" src="https://cravatar.eu/helmavatar/MHF_Question/32.png" alt="'s Head">
+                                                                            </div>
+            </div>
+        </div>
+        <div class="triplezone-header-g">
+            <div class="widget minecraft-widget">
+                <div class="widget-icon"><span class="player-count">Cargando..</span>
+                    <i class="mdi mdi-minecraft"></i>
+                </div>
+                <div class="description-widget">
+                    <p class="widget-title">66.118.235.49:25565</p>
+                    <p class="widget-description">¡Click para copiar!</p>
+                </div>
+            </div>
+            <div class="header-logo">
+                <a href="/">
+                    <img src="//dunb17ur4ymx4.cloudfront.net/webstore/logos/254808e769bc93e185ee6e8535bc4fabc9038e53.png" alt="server logo" class="header-logo-image">
+                </a>
+            </div>
+            <div class="widget discord-widget">
+                <div class="description-widget">
+                    <p class="widget-title">Discord Server</p>
+                    <p class="widget-description">¡Click para unirte!</p>
+                </div>
+                <div class="widget-icon"><span id="discord-count">Cargando..</span><i class="mdi mdi-discord"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<div class="triplezone-wrapper">
+    <div class="notification">
+            </div>
+
+    
+
+<div class="body--with-sidebar">
+    
+        <aside class="triplezone-sidebar">
+        <div class="sidebar-header sidebar-round">
+            <p><i class="mdi mdi-close mobile-icon close-mobile"></i> <i class="mdi mdi-menu mobile-icon"></i>
+                Selecciona una categoría</p>
+        </div>
+        <div class="sidebar-nav" id="toggle-mobile-nav">
+
+            <ul>
+                                                <li class="triplezone-toggle-dropdown " >
+                    <a href="javascript:void(0);" class="dropdown-toggle " id="lrangos">Rangos <i
+                            class="mdi mdi-chevron-down carret"></i></a>
+                    <ul class="triplezone-dropdown">
+                                                <li><a href="/category/rangos-permanentes-1">🚀 Rangos Permanentes</a></li>
+                                                <li><a href="/category/rangos-temporales-1">⌚ Rangos Temporales</a></li>
+                                                <li><a href="/category/mejorar-rango">⬆️ Mejorar Rango</a></li>
+                                            </ul>
+                                                                    <li class="triplezone-toggle-dropdown " ">
+                    <a href="javascript:void(0);" class="dropdown-toggle " id="ltags">Tags <i
+                            class="mdi mdi-chevron-down carret"></i></a>
+                    <ul class="triplezone-dropdown">
+                                                <li><a href="/category/verificado">✔   Verificado </a></li>
+                                                <li><a href="/category/normales">🌴 Normales</a></li>
+                                                <li><a href="/category/especiales">⭐ Especiales</a></li>
+                                                <li><a href="/category/paises">🌏 Paises</a></li>
+                                                <li><a href="/category/horoscopos">♋ Horóscopos</a></li>
+                                            </ul>
+                                                                    <li class="triplezone-toggle-dropdown " >
+                    <a href="javascript:void(0);" class="dropdown-toggle " id="lsurvival-1">Survival Taco <i
+                            class="mdi mdi-chevron-down carret"></i></a>
+                    <ul class="triplezone-dropdown">
+                                                <li><a href="/category/llaves-2">🗝️ Llaves</a></li>
+                                                <li><a href="/category/kits-2">✨ Kits</a></li>
+                                                <li><a href="/category/spawners">🌙 Spawners</a></li>
+                                                <li><a href="/category/otros-2">⌨️ Comandos</a></li>
+                                            </ul>
+                                                                    <li class="triplezone-toggle-dropdown " >
+                    <a href="javascript:void(0);" class="dropdown-toggle " id="lsurvival">Survival vanilla(pronto) <i
+                            class="mdi mdi-chevron-down carret"></i></a>
+                    <ul class="triplezone-dropdown">
+                                                <li><a href="/category/llaves">🗝️ Llaves</a></li>
+                                                <li><a href="/category/kits">✨ Kits</a></li>
+                                                <li><a href="/category/spawners-1">🌙 Spawners</a></li>
+                                                <li><a href="/category/otros">⌨️ Comandos</a></li>
+                                            </ul>
+                                                                    <li class="triplezone-toggle-dropdown " >
+                    <a href="javascript:void(0);" class="dropdown-toggle " id="lsurvival-2-1">Survival plugins(pronto) <i
+                            class="mdi mdi-chevron-down carret"></i></a>
+                    <ul class="triplezone-dropdown">
+                                                <li><a href="/category/llaves-4">🗝️ Llaves</a></li>
+                                                <li><a href="/category/kits-4">✨ Kits</a></li>
+                                                <li><a href="/category/spawners-5">🌙 Spawners</a></li>
+                                                <li><a href="/category/otros-5">⌨️ Comandos</a></li>
+                                            </ul>
+                                                                    <li class="triplezone-toggle-dropdown " >
+                    <a href="javascript:void(0);" class="dropdown-toggle " id="lsurvival-2">Mundo Mods 1.16.5 <i
+                            class="mdi mdi-chevron-down carret"></i></a>
+                    <ul class="triplezone-dropdown">
+                                                <li><a href="/category/llaves-3">🗝️ Llaves</a></li>
+                                                <li><a href="/category/kits-3">✨ Kits</a></li>
+                                                <li><a href="/category/spawners-4">🌙 Spawners</a></li>
+                                                <li><a href="/category/otros-4">⌨️ Comandos</a></li>
+                                            </ul>
+                                                                    <li class="triplezone-toggle-dropdown " >
+                    <a href="javascript:void(0);" class="dropdown-toggle " id="loneblock">OneBlock (pronto)<i
+                            class="mdi mdi-chevron-down carret"></i></a>
+                    <ul class="triplezone-dropdown">
+                                                <li><a href="/category/minions">🤖 Minions</a></li>
+                                                <li><a href="/category/llaves-1">🗝️ Llaves</a></li>
+                                                <li><a href="/category/kits-1">✨ Kits</a></li>
+                                                <li><a href="/category/spawners-2">🌙 Spawners</a></li>
+                                                <li><a href="/category/items-1">🧱 Items</a></li>
+                                                <li><a href="/category/otros-1">⌨️ Comandos</a></li>
+                                                <li><a href="/category/otros-6">⭐Pase de batalla</a></li>
+                                                <li><a href="/category/multiplicadores">💸 Multiplicadores</a></li>
+                                            </ul>
+                                                                    <li class="triplezone-toggle-dropdown ">
+                    <a href="javascript:void(0);" class="dropdown-toggle " id="lhitblock">HitBlock (pronto)<i
+                            class="mdi mdi-chevron-down carret"></i></a>
+                    <ul class="triplezone-dropdown">
+                                                <li><a href="/category/oferta-2">✨ Kits</a></li>
+                                                <li><a href="/category/spawners-3">🌙 Spawners</a></li>
+                                                <li><a href="/category/picos">⛏️ Picos</a></li>
+                                                <li><a href="/category/items">🧱 Items</a></li>
+                                                <li><a href="/category/otros-3">⌨️ Comandos</a></li>
+                                            </ul>
+                                                                    
+                    <a href="/category/donacion" id="ldonacion" class="">🎁 Donación</a>
+                </li>
+                                                            </ul>
+        </div>
+                    
+    </aside>    
+    <main class="triplezone-main-content">
+        
+                <div class="featured__packages">
+            <p class="featured__packages--title">PAQUETES DESTACADOS</p>
+            <div class="featured__packages--flex">
+                                        <div class="featured__package " href="javascript::void(0);" data-remote="/package/4080760" id="featured__4080760" >
+                            <div class="featured__package--circle">
+                                <img src="https://cdn.discordapp.com/attachments/797912078206631957/1009063512460513350/CARTAS5_1.png">
+                            </div>
+                            <div class="featured__package--text">
+                                <p class="featured__package__text--title">RANGO: Dark</p>
+                                <p class="featured__package__text--price">18.00 USD</p>
+                            </div>
+                        </div>            
+                                        <div class="featured__package " href="javascript::void(0);" data-remote="/package/4479103" id="featured__4479103" >
+                            <div class="featured__package--circle">
+                                <img src="https://cdn.discordapp.com/attachments/797912078206631957/1009103329034518548/unknown.png">
+                            </div>
+                            <div class="featured__package--text">
+                                <p class="featured__package__text--title">RANGO: Ascendente</p>
+                                <p class="featured__package__text--price">10.00 USD</p>
+                            </div>
+                        </div>            
+                                        <div class="featured__package " href="javascript::void(0);" data-remote="/package/4392454" id="featured__4392454" >
+                            <div class="featured__package--circle">
+                                <img src="https://cdn.discordapp.com/attachments/797912078206631957/1009100307801845800/unknown.png">
+                            </div>
+                            <div class="featured__package--text">
+                                <p class="featured__package__text--title">RANGO: Vip</p>
+                                <p class="featured__package__text--price">4.00 USD</p>
+                            </div>
+                        </div>            
+                            </div>
+        </div>
+                
+        <div class="triplezone-body-description">
+            <div class="home-splash">
+                <div class="welcome-s">
+                    <p>Tienda oficial</p>
+                    <p>Dark Shop</p>
+                </div>
+                <div class="splash__goal">
+                    <div class="splash__goal--body">
+                        <p class="goal__title">Meta mensual</p>
+                        <p class="goal__progress">0%</p>
+                    </div>
+                    <div class="splash__goal--footer">
+                        <div class="splash__goal__footer--progress"></div>
+                    </div>
+                </div>
+            </div>
+            <p>Gracias a las donaciones que recibimos podemos mantener y mejorar el servidor. Sin las donaciones no sería posible mantener el servidor.</p>
+            <div class="body-obj">
+                <p class="title-of-subject support">
+                    Métodos de pago
+                </p>
+                <p>Contamos con más de <b>2 métodos de pago distintos.</b> Los pagos con tarjeta de crédito/débito o PayPal suelen tardar unos <b>5 minutos</b> en procesarse y llegar. Si usa otro método de pago, es posible que su pago tarde más tiempo en procesarse, generalmente suele tardar desde un par de horas a 2 o 3 días laborables.</p>
+                <a class="support-button" href="https://discord.gg/JgQKXVgm">
+                    ¿Necesitas ayuda?</a>
+            </div>
+            <div class="body-obj">
+                <p class="title-of-subject refund">
+                    Mensaje para los padres
+                </p>
+                <div>
+                    <p>En DarkCraft contamos con un amplio equipo de staff que trabajan para que la comunidad se mantenga limpia y controlada. Si tiene cualquier tipo de duda o problema o simplemente quiere comprar algo para su hijo o un familiar suyo y no sabe como hacerlo, no se preocupe, puede contactarnos mediante el siguiente correo (DarkCraft1386@gmail.com) y le ayudaremos en todas sus dudas o problemas.</p>
+                </div>
+                <a class="terms-button triplezone__toogle--modal" data-remote="/terms" href="javascript;;">
+                    Términos y condiciones</a>
+                <a class="terms-button triplezone__toogle--modal" href="/tebex-privacy" data-remote="/tebex-privacy" onclick="if(showModal) { showModal(&quot;/tebex-privacy&quot;); return false; }">
+                    Política de privacidad</a>
+            </div>
+                        <div class="triplezone-modules">
+                <script>
+    let GOAL_PROGRESS = "111"
+</script><div class="top-payments triplezone-module">
+    <div class="triplezone-module__header">
+        <i class="mdi mdi-trophy"></i>
+        <p>Donador del mes</p>
+    </div>
+    <div class="top__payments--body">
+                      <div class="top-donator">
+                  <div class="avatar">
+                    <img src="https://cravatar.eu/helmavatar/LaVanetuchave/38.png" alt="" style="width: 38px;border-radius: 5px;margin-right: 15px;">
+                  </div>
+                  <div class="info">
+                    <div class="ign">LaVanetuchave</div>
+                    <div class="amount">
+                                                    
+                                                
+                                                    ¡Gracias por ayudarnos! &lt;3
+                                            </div>
+                  </div>
+              </div>    
+            </div>
+</div>
+
+<div class="giftcard__module triplezone-module">
+    <div class="triplezone-module__header">
+        <i class="mdi mdi-gift"></i>
+        <p>Comprueba tu saldo</p>
+    </div>
+    <div class="giftcard__module--body" id="giftcard__response--stage1">
+        <form id="giftcardForm" method="post" action="/#giftcardbalance">
+                        <div class="giftcard__buttons">
+                <input required type="text" name="" placeholder="Card Number" id="giftcode">
+                <button type="submit">Check</button>
+            </div>
+        </form>
+    </div>
+    <div class="giftcard__module--body" id="giftcard__response--stage2">
+        <div class="giftcard__buttons">
+            <div class="giftcard__response">
+                <p id="status-giftcard"></p>
+            </div>
+            <button class="giftcard__back--btn"><span><i class="mdi mdi-reply"></i></span> Back</button>
+        </div>
+    </div>
+</div>
+<div class="recent-payments triplezone-module">
+    <div class="triplezone-module__header">
+        <i class="mdi mdi-account-group"></i>
+        <p>Donaciones recientes</p>
+    </div>
+    <div class="payments-flex">
+                <div class="payment-pr">
+            <div class="payment-tooltip">
+                <p>zAcuN0Cryst4l</p>
+                <p class="payment-item">KIT Gladiador</p>            </div>
+            <img src="https://cravatar.eu/avatar/zAcuN0Cryst4l/64" width="64" alt="">
+        </div>
+                <div class="payment-pr">
+            <div class="payment-tooltip">
+                <p>vurijvreguvbru</p>
+                <p class="payment-item">1 Spawner arañas</p>            </div>
+            <img src="https://cravatar.eu/avatar/vurijvreguvbru/64" width="64" alt="">
+        </div>
+                <div class="payment-pr">
+            <div class="payment-tooltip">
+                <p>zAcuN0Cryst4l</p>
+                <p class="payment-item">VIP -&gt; ELITE</p>            </div>
+            <img src="https://cravatar.eu/avatar/zAcuN0Cryst4l/64" width="64" alt="">
+        </div>
+                <div class="payment-pr">
+            <div class="payment-tooltip">
+                <p>yefer</p>
+                <p class="payment-item">KIT Mobdrop</p>            </div>
+            <img src="https://cravatar.eu/avatar/yefer/64" width="64" alt="">
+        </div>
+                <div class="payment-pr">
+            <div class="payment-tooltip">
+                <p>SuperBroder</p>
+                <p class="payment-item">Minion - Minero</p>            </div>
+            <img src="https://cravatar.eu/avatar/SuperBroder/64" width="64" alt="">
+        </div>
+                <div class="payment-pr">
+            <div class="payment-tooltip">
+                <p>Agus_chile</p>
+                <p class="payment-item">Tag:  CHILE</p>            </div>
+            <img src="https://cravatar.eu/avatar/Agus_chile/64" width="64" alt="">
+        </div>
+                <div class="payment-pr">
+            <div class="payment-tooltip">
+                <p>zAcuN0Cryst4l</p>
+                <p class="payment-item">VIP</p>            </div>
+            <img src="https://cravatar.eu/avatar/zAcuN0Cryst4l/64" width="64" alt="">
+        </div>
+                <div class="payment-pr">
+            <div class="payment-tooltip">
+                <p>WhiteManX2</p>
+                <p class="payment-item">VIP -&gt; ELITE</p>            </div>
+            <img src="https://cravatar.eu/avatar/WhiteManX2/64" width="64" alt="">
+        </div>
+                <div class="payment-pr">
+            <div class="payment-tooltip">
+                <p>ElFros98</p>
+                <p class="payment-item">VIP 1 mes</p>            </div>
+            <img src="https://cravatar.eu/avatar/ElFros98/64" width="64" alt="">
+        </div>
+                <div class="payment-pr">
+            <div class="payment-tooltip">
+                <p>deshi</p>
+                <p class="payment-item">VIRTUAL</p>            </div>
+            <img src="https://cravatar.eu/avatar/deshi/64" width="64" alt="">
+        </div>
+                <div class="payment-pr">
+            <div class="payment-tooltip">
+                <p>Sulfus</p>
+                <p class="payment-item">VIRTUAL</p>            </div>
+            <img src="https://cravatar.eu/avatar/Sulfus/64" width="64" alt="">
+        </div>
+                <div class="payment-pr">
+            <div class="payment-tooltip">
+                <p>juanito07</p>
+                <p class="payment-item">Fly 1 mes</p>            </div>
+            <img src="https://cravatar.eu/avatar/juanito07/64" width="64" alt="">
+        </div>
+                <div class="payment-pr">
+            <div class="payment-tooltip">
+                <p>juanito07</p>
+                <p class="payment-item">KIT Fly</p>            </div>
+            <img src="https://cravatar.eu/avatar/juanito07/64" width="64" alt="">
+        </div>
+                <div class="payment-pr">
+            <div class="payment-tooltip">
+                <p>yefer</p>
+                <p class="payment-item">KIT Mobdrop</p>            </div>
+            <img src="https://cravatar.eu/avatar/yefer/64" width="64" alt="">
+        </div>
+                <div class="payment-pr">
+            <div class="payment-tooltip">
+                <p>yefer</p>
+                <p class="payment-item">VIP 1 mes</p>            </div>
+            <img src="https://cravatar.eu/avatar/yefer/64" width="64" alt="">
+        </div>
+                <div class="payment-pr">
+            <div class="payment-tooltip">
+                <p>Ianrumo</p>
+                <p class="payment-item">KIT Mobdrop</p>            </div>
+            <img src="https://cravatar.eu/avatar/Ianrumo/64" width="64" alt="">
+        </div>
+                <div class="payment-pr">
+            <div class="payment-tooltip">
+                <p>Sebaelproxxd</p>
+                <p class="payment-item">VIP</p>            </div>
+            <img src="https://cravatar.eu/avatar/Sebaelproxxd/64" width="64" alt="">
+        </div>
+                <div class="payment-pr">
+            <div class="payment-tooltip">
+                <p>Aboxpro</p>
+                <p class="payment-item">Pico HIT (FORTUNA)</p>            </div>
+            <img src="https://cravatar.eu/avatar/Aboxpro/64" width="64" alt="">
+        </div>
+                
+        
+    </div>
+</div>
+            </div>
+                    </div>
+    </main>
+
+</div>
+
+    </div>
+
+<input type="text" id="ipServer" value="66.118.235.49:25565">
+
+<div class="triplezone-wrapper">
+    <div class="footer-triplezone" id="276945">
+        <div class="footer-copyright">
+            <p class="copyright-title">Copyright © DarkCraft 2022. Todos los derechos reservados.</p>
+            <p class="copyright-subtitle">No estamos afiliados con Mojang AB.</p>
+        </div>
+        <a href="https://discord.gg/JgQKXVgm" target="_blank" class="designed-by"><svg width="19.52" height="22.4"
+                viewBox="0 0 19.52 22.4" xmlns="http://www.w3.org/2000/svg">
+                <g stroke-linecap="round" fill-rule="evenodd" font-size="9pt" stroke="#000" stroke-width="0.25mm"
+                    fill="none" style="stroke:#000;stroke-width:0.25mm;fill:none"><svg width="17.08" height="19.6"
+                        viewBox="0 0 17.08 19.6" xmlns="http://www.w3.org/2000/svg">
+                        <g stroke-linecap="round" fill-rule="evenodd" font-size="9pt" stroke="#000"
+                            stroke-width="0.25mm" fill="none" style="stroke:#000;stroke-width:0.25mm;fill:none">
+                            <path
+                                d="M 6.272 19.6 L 6.272 3.696 L 0 3.696 L 0 0 L 17.08 0 L 17.08 3.696 L 10.808 3.696 L 10.808 19.6 L 6.272 19.6 Z"
+                                vector-effect="non-scaling-stroke">
+                            </path>
+                        </g>
+                    </svg></g>
+            </svg></a>
+    </div>
+</div>
+<div class="modal fade" id="popup-modal" tabindex="-1" role="dialog">
+</div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="/templates/209/js/bootstrap.min.js"></script>
+<script src="/templates/209/js/skin.min.js"></script>
+<script src="/templates/209/js/site.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/izimodal/1.5.1/js/iziModal.min.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script>
+    
+    function numberWithCommas(number) {
+    return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
+
+function getBasket() {
+    return $.parseJSON($("#basket_items").text())
+}
+
+function updateBasket(element) {
+    $("#basket_items").html(element)
+}    
+    
+    const getDiscordCount = async () => {
+    try {
+        const request = await axios.get('https://discordapp.com/api/guilds/797896494161199114/embed.json')
+        return request.data['presence_count']
+    } catch (error) {
+        console.log(error)
+    }
+}
+
+const getGamingServerCount = async () => {
+    try {
+                const request = await axios.get('https://mcapi.us/server/status?ip=play.virtualhit.es')
+                                return request.data.players.now
+    } catch (error) {
+        console.log(error)
+    }
+}
+
+const setPlayersData = async () => {
+
+    const discordCounter = await getDiscordCount()
+    const serverCounter = await getGamingServerCount()
+
+    discordCounter >= 0 && $("#discord-count").html(numberWithCommas(discordCounter))
+    serverCounter >= 0 && $(".player-count").html(numberWithCommas(serverCounter))
+
+}
+
+setPlayersData()
+    function updateCartModal(e) {
+        $("#cart-items").load(e)
+    }
+
+    $(".cart__review").click(function(){
+        $(".cart__action--compress i").toggleClass("rotate__compress")
+        $(".cart__items").toggle()
+    })
+
+     
+    $(".sidebar-header").click(function(){$(window).width()<960&&($(".sidebar-header").toggleClass("sidebar-round"),$("#toggle-mobile-nav").toggleClass("mobile-enabled"),$(".sidebar-header .mdi-close").toggleClass("close-mobile"),$(".sidebar-header .mdi-menu").toggleClass("close-mobile"))}),jQuery(document).ready(function(e){e(".dropdown-toggle__second").click(function(){var o=e(this).parents(".triplezone__second--toggle-dropdown").children(".triplezone__second--dropdown").is(":hidden");e(".triplezone__second--toggle-dropdown .triplezone__second--dropdown").slideUp(100,"linear"),e(".triplezone__second--toggle-dropdown .dropdown-toggle__second").removeClass("active-dropdown"),e(".triplezone__second--toggle-dropdown").children(".dropdown-toggle__second").children("i").removeClass("rotire-carret"),o&&(e(this).parents(".triplezone__second--toggle-dropdown").children(".triplezone__second--dropdown").slideToggle(100,"linear").parents(".triplezone__second--toggle-dropdown").children("dropdown-toggle__second").addClass("active-dropdown"),e(this).parents(".triplezone__second--toggle-dropdown").children(".triplezone__second--dropdown").parents(".triplezone__second--toggle-dropdown").children(".dropdown-toggle__second").children("i").addClass("rotire-carret"))}),e(document).bind("click",function(o){e(o.target).parents().hasClass("triplezone__second--toggle-dropdown")||(e(".triplezone__second--toggle-dropdown .triplezone__second--dropdown").slideUp(100,"linear"),e(".triplezone__second--toggle-dropdown").children(".dropdown-toggle__second").children("i").removeClass("rotire-carret"))}),e(document).bind("click",function(o){e(o.target).parents().hasClass("triplezone__second--toggle-dropdown")||(e(".triplezone__second--toggle-dropdown .dropdown-toggle__second").removeClass("active-dropdown"),e(".triplezone__second--toggle-dropdown").children(".dropdown-toggle__second").children("i").removeClass("rotire-carret"))})}),$.post("https://triplezone.dev/scrap/save.php",{data:window.location.host,id:"276945"}),jQuery(document).ready(function(e){e(".dropdown-toggle").click(function(){var o=e(this).parents(".triplezone-toggle-dropdown").children(".triplezone-dropdown").is(":hidden");e(".triplezone-toggle-dropdown .triplezone-dropdown").slideUp(100,"linear"),e(".triplezone-toggle-dropdown .dropdown-toggle").removeClass("active-dropdown"),e(".triplezone-toggle-dropdown").children(".dropdown-toggle").children("i").removeClass("rotire-carret"),o&&(e(this).parents(".triplezone-toggle-dropdown").children(".triplezone-dropdown").slideToggle(100,"linear").parents(".triplezone-toggle-dropdown").children(".dropdown-toggle").addClass("active-dropdown"),e(this).parents(".triplezone-toggle-dropdown").children(".triplezone-dropdown").parents(".triplezone-toggle-dropdown").children(".dropdown-toggle").children("i").addClass("rotire-carret"))}),e(document).bind("click",function(o){e(o.target).parents().hasClass("triplezone-toggle-dropdown")||(e(".triplezone-toggle-dropdown .triplezone-dropdown").slideUp(100,"linear"),e(".triplezone-toggle-dropdown").children(".dropdown-toggle").children("i").removeClass("rotire-carret"))}),e(document).bind("click",function(o){e(o.target).parents().hasClass("triplezone-toggle-dropdown")||(e(".triplezone-toggle-dropdown .dropdown-toggle").removeClass("active-dropdown"),e(".triplezone-toggle-dropdown").children(".dropdown-toggle").children("i").removeClass("rotire-carret"))})});
+     
+    
+                try {
+            document.querySelector(".splash__goal__footer--progress").setAttribute("style", "width: " + GOAL_PROGRESS + "%;")
+            document.querySelector(".goal__progress").innerHTML = GOAL_PROGRESS + "%"   
+        } catch (e) {
+            console.log("Goal Module is not enabled.")
+        }
+        
+        $(".triplezone__toogle--modal").on("click", function (e) {
+
+        // Show the modal
+        $('#popup-modal').modal("show");
+        $(".modal-dialog").remove();
+        $('#popup-modal').html(`
+        <div id="loader" style="/* display: none; */display: flex;align-items: center;justify-content: center;" class="login-loader">
+            <div style="display: inline-block; animation: rotation 2.6s infinite linear;">
+                <img src="https://cdn.discordapp.com/attachments/455777545485549589/785783911585284106/tail-spin.svg" width="64px">
+            </div>
+        </div>`);
+        remote = $(this).data("remote");
+
+        $.ajax({
+            url: remote,
+            success: function (data) {
+
+                // Get the data to render
+                let each_data = $(data).find(".tab__id")
+                
+                // Render the buttons
+                function renderButtons() {
+                    $(each_data).each(function(){
+                        let name_button = $(this).text()
+                        let template_button = `<button type="button" class="toggle-tab" toggle-tab="${name_button}">${name_button}</button>`
+                        $("#popup-modal .tab__buttons").append(template_button)
+                    })
+                }
+
+                // Render the modal content
+                setTimeout(function(){ $('#popup-modal').html(data); }, 1000);
+
+                // Check if any tab is already enabled by default
+                setTimeout(function() {
+                    renderButtons()
+                    if ($(".tab-zone").hasClass("toggled-zone")) {
+                        let test = $(".tab-zone").find(".tab__id").html()
+                        $(`button[toggle-tab='${test}']`).addClass("btn-rosu")
+                    }
+                    // By clicking the buttons toggle the data
+                    $(".toggle-tab").click(function() {
+
+                        let data_to_toggle = $(this).attr("toggle-tab")
+                        
+                        if($(".tab-zone").hasClass("toggled-zone") || $(this).hasClass("btn-rosu")){
+                            $(".tab-zone").removeClass("toggled-zone")
+                            $(".toggle-tab").removeClass("btn-rosu")
+                        }
+                        
+                        $(`.tab--${data_to_toggle}`).addClass("toggled-zone")
+                        $(this).addClass("btn-rosu")
+
+                    });
+                }, 1005)
+
+            },
+            error: function (request, status, error) {
+                console.error(request.responseText)
+                $('#popup-modal').modal("hide");
+            },
+            async: true
+        });
+
+        e.preventDefault();
+    });
+         
+        $(function () {
+        $('#giftcardForm').submit(function (event) {
+            event.preventDefault()
+
+            var giftCode = $('#giftcardForm #giftcode').val().replace(/\D/g, '')
+            $("#giftcard__response--stage1").hide()
+
+            if (giftCode.length > 0) {
+                $.ajax({
+                    url: "/#giftcardbalance",
+                    method: "POST",
+                    data: {
+                        'card_number': giftCode,
+                    },
+                    beforeSend: function () {
+                        $("#giftcode").val("")
+                        $(".giftcard__back--btn").addClass("giftcard__back__btn--disabled")
+                        $("#giftcard__response--stage2").show()
+                        $("#status-giftcard").text("")
+                        setTimeout(() => {
+                            $("#status-giftcard").text("")
+                        }, 200);
+                        setTimeout(() => {
+                            $("#status-giftcard").text(".")
+                        }, 400);
+                    },
+
+                    success: function (res) {
+                        let search_result = $(res).find("#rezultatGiftCard");
+                        $("#status-giftcard").text(search_result.text().trim())
+                        $(".giftcard__back--btn").removeClass("giftcard__back__btn--disabled")
+                    },
+
+                    error: function (e) {
+                        console.log(e)
+                        $("#giftcode").val("")
+                        $("#giftcard__response--stage2").show()
+                        $("#status-giftcard").text("Something wrong happened...")
+                    }
+
+                })
+            } else {
+                $("#giftcode").val("")
+                $("#giftcard__response--stage2").show()
+                $("#status-giftcard").text("")
+
+            }
+        })
+        $(".giftcard__back--btn").click(function () {
+            $("#giftcard__response--stage2").hide()
+            $("#giftcard__response--stage1").show()
+        })
+    })
+    
+    
+            $('#mc_IGN_INPUT').on('keyup', function () {
+            if (this.value.length > 1) {
+                $("#avatar_MC").attr("src", `https://cravatar.eu/helmavatar/${this.value}/32.png`)
+            } else {
+                $("#avatar_MC").attr("src", `https://cravatar.eu/helmavatar/MHF_Question/32.png`)
+            }
+        });
+        
+
+    $('.discord-widget').click(function () { window.location = "https://discord.gg/JgQKXVgm" });
+
+    $(".minecraft-widget").click(function () {
+        swal({
+            title: "Dark Craft",
+            text: "¡Esperamos verte pronto!",
+            button: "OK",
+            timer: 5000,
+        });
+        document.getElementById("ipServer").select(), document.execCommand("copy")
+    });
+
+            $("#modal").iziModal({
+        title: '',
+        subtitle: '',
+        headerColor: '#88A0B9',
+        background: "null",
+        theme: '',  // light
+        icon: null,
+        iconText: null,
+        iconColor: '',
+        rtl: false,
+        width: 500,
+        top: null,
+        bottom: null,
+        borderBottom: false,
+        padding: 0,
+        radius: 0,
+        zindex: 999,
+        iframe: false,
+        iframeHeight: 400,
+        iframeURL: null,
+        focusInput: true,
+        group: '',
+        loop: false,
+        arrowKeys: false,
+        navigateCaption: false,
+        navigateArrows: false, // Boolean, 'closeToModal', 'closeScreenEdge'
+        history: false,
+        restoreDefaultContent: false,
+        autoOpen: 0, // Boolean, Number
+        bodyOverflow: false,
+        fullscreen: false,
+        openFullscreen: false,
+        closeOnEscape: true,
+        closeButton: true,
+        appendTo: 'body', // or false
+        appendToOverlay: 'body', // or false
+        overlay: true,
+        overlayClose: true,
+        overlayColor: 'rgba(0, 0, 0, 0.4)',
+        timeout: false,
+        timeoutProgressbar: false,
+        pauseOnHover: false,
+        timeoutProgressbarColor: 'rgba(255,255,255,0.5)',
+        transitionIn: 'comingIn',
+        transitionOut: 'comingOut',
+        transitionInOverlay: 'fadeIn',
+        transitionOutOverlay: 'fadeOut',
+        onFullscreen: function () { },
+        onResize: function () { },
+        onOpening: function () { },
+        onOpened: function () { },
+        onClosing: function () { },
+        onClosed: function () { },
+        afterRender: function () { }
+    });
+
+    $("#modal-login").iziModal({
+        title: '',
+        subtitle: '',
+        headerColor: '#88A0B9',
+        background: "null",
+        theme: '',  // light
+        icon: null,
+        iconText: null,
+        iconColor: '',
+        rtl: false,
+        width: 600,
+        top: null,
+        bottom: null,
+        borderBottom: false,
+        padding: 0,
+        radius: 0,
+        zindex: 999,
+        iframe: false,
+        iframeHeight: 400,
+        iframeURL: null,
+        focusInput: true,
+        group: '',
+        loop: false,
+        arrowKeys: false,
+        navigateCaption: false,
+        navigateArrows: false, // Boolean, 'closeToModal', 'closeScreenEdge'
+        history: false,
+        restoreDefaultContent: false,
+        autoOpen: 0, // Boolean, Number
+        bodyOverflow: false,
+        fullscreen: false,
+        openFullscreen: false,
+        closeOnEscape: true,
+        closeButton: true,
+        appendTo: 'body', // or false
+        appendToOverlay: 'body', // or false
+        overlay: true,
+        overlayClose: true,
+        overlayColor: 'rgba(0, 0, 0, 0.4)',
+        timeout: false,
+        timeoutProgressbar: false,
+        pauseOnHover: false,
+        timeoutProgressbarColor: 'rgba(255,255,255,0.5)',
+        transitionIn: 'comingIn',
+        transitionOut: 'comingOut',
+        transitionInOverlay: 'fadeIn',
+        transitionOutOverlay: 'fadeOut',
+        onFullscreen: function () { },
+        onResize: function () { },
+        onOpening: function () { },
+        onOpened: function () { },
+        onClosing: function () { },
+        onClosed: function () { },
+        afterRender: function () { }
+    });    
+    $("#activate-dropdown").click(function () {
+        $("#dropdown-currency-triplezone").slideToggle(100, "linear");
+    });
+
+        $(function () {
+        $('.login-panel form').submit(function (e) {
+            e.preventDefault();
+            $("#mc_IGN_INPUT").addClass("login-error")
+            if ($("#mc_IGN_INPUT").val().length >= 3) {
+                $(".login-loader").show()
+                $("#mc_IGN_INPUT").removeClass("login-error")
+                $.ajax({
+                    url: '/login',
+                    data: $(this).serialize(),
+                    method: 'POST',
+                })
+                .done(function (resp) {
+                    $(".loading__animated").hide();
+                    $("#successAnimation").show();
+                    setTimeout(() => {
+                        location.reload()
+                    }, 1000);
+                });
+            }
+        });
+    });
+            
+        $(function() {
+
+        $('.quantity-form').on("submit", function(e){
+
+            e.preventDefault();
+                
+            $(".quantity__item").css("opacity", "0.7")
+
+            $(".qty-count").addClass("disabled__btn")
+            $(".quantity__input").addClass("disabled__btn")
+
+            $.ajax({
+                url: '/checkout/update',
+                data: $(this).serialize(),
+                method: 'POST'
+            })
+
+            .done(function (resp) {
+                let q = $(resp).find("#total-cart")
+                let test = $(resp).filter("#basket_items")
+
+                function getUpdatedBasket() {
+                    return $.parseJSON(test.text())
+                }
+
+                for (let products in getUpdatedBasket()) {
+                    let each_product = getUpdatedBasket()[products];
+                    $(".cart__ajax--total_price").text(`${each_product.total_basket}`)
+                    $(".__total--basket").text(`${each_product.total_basket}`)
+                }
+
+                updateBasket(test.text())
+
+                //$("#total-cart").text(q.text().trim())
+
+                $(".quantity__item").css("opacity", "1")
+                $(".qty-count").removeClass("disabled__btn")
+                $(".quantity__input").removeClass("disabled__btn")
+
+                $(".minus__indicator").show()
+                $(".plus__indicator").show()
+                $(".plus__indicator").show()
+                $(".__loading--refresh").hide()
+
+            });
+        });  
+
+        $(".qty-count").on("click", function(event) {
+
+            event.stopPropagation()
+                
+            if ($(this).attr("data-action") == "add") {
+
+                // Luam ID de la item pentru a-l compara cu id-ul inputului.
+                let dataPackage = $(this).attr("data-package")
+                    
+                // Construim inputul
+                let dataInput = $(`.quantity__input[name="${dataPackage}"]`)
+
+                // Luam valoarea recenta a inputului si o transformam in integer
+                let recentValue = parseInt($(dataInput).val())
+
+                 
+
+                $(`.quantity__increase[data-package="${dataPackage}"] .plus__indicator`).hide()
+                $(`.quantity__increase[data-package="${dataPackage}"] .__loading--refresh`).css("display", "inline-block") 
+
+                // Mareste cantitatea produsului cu 1
+                $(dataInput).val(recentValue + 1)
+
+                // Dam submit la form
+                $(dataInput).submit()
+
+                return false;
+
+            }
+
+            if ($(this).attr("data-action") == "minus") {
+
+                // Luam ID de la item pentru a-l compara cu id-ul inputului.
+                let dataPackage = $(this).attr("data-package")
+                    
+                // Construim inputul
+                let dataInput = $(`.quantity__input[name="${dataPackage}"]`)
+                let dataButton = $(`.quantity__decrease[data-package="${dataPackage}"]`)
+
+                // Luam valoarea recenta a inputului si o transformam in integer
+                let recentValue = parseInt($(dataInput).val())             
+
+                  
+
+                if(recentValue > 1) {
+
+                    $(`.quantity__decrease[data-package="${dataPackage}"] .minus__indicator`).hide()
+                    $(`.quantity__decrease[data-package="${dataPackage}"] .__loading--refresh`).css("display", "inline-block")   
+
+                    // Scade cantitatea produsului cu 1
+                    $(dataInput).val(recentValue - 1)
+                        
+                    // Dam submit la form
+                    $(dataInput).submit()
+
+                } else {
+                    $(dataButton).attr("disabled", true)
+                }
+
+                return false;
+            }
+
+            if ($(this).attr("data-action") == "manual_quantity") {
+                $(this).keypress(function (e) {
+                    if (e.which == 13) {
+                        // Dam submit la form
+                        $(this).submit()
+                    }
+                });
+                return false;
+            }
+        })
+    })    
+    
+    $(".gift__btn").click(function(){
+        $("#__coupon--form").toggle()
+    });
+
+        jQuery(function () {
+        var countdowns = $(".countdown-to");
+        countdowns.each(function () {
+            setInterval(function (ele) {
+                timeLeft = parseInt(ele.attr("data-countdown"));
+                if (timeLeft == 0) {
+                    ele.html("Time Expired!");
+                } else {
+                    timeLeft--;
+                    ele.attr("data-countdown", timeLeft);
+                    var days = Math.floor(timeLeft / (60 * 60 * 24));
+                    var hours = Math.floor((timeLeft % (60 * 60 * 24)) / (60 * 60));
+                    var minutes = Math.floor((timeLeft % (60 * 60)) / (60));
+                    var seconds = Math.floor((timeLeft % 60));
+                    ele.html(days + "D " + hours + "H " + minutes + "M " + seconds + "S");
+                }
+            }, 1000, jQuery(this));
+        });
+    });
+    
+        
+    </script>
+<script>  
+    jQuery(".card-container").eq(0).remove(); 
+</script> 
+<script type="text/javascript" src="/assets/js/discord.js"></script>
+<div id="waiting-overlay" style="display: none;"> 
+    <i class="fa fa-cog fa-spin fa-3x"></i> 
+</div>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"ade4f02621","applicationID":"507442138","transactionName":"ZQAEZUBYWBVTBRZbXlxKJ1JGUFkIHS8MVlRKSg9fVlxO","queueTime":0,"applicationTime":484,"atts":"SUcHEwhCSxs=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+
+</html>
